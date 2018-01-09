@@ -1,0 +1,9 @@
+---
+- hosts: all
+  gather_facts: no
+  become: yes
+
+  tasks:
+  - user: 
+     name: ec2-user
+     password: $6$sRvXWmR5BBwqRlih$xYqr1mSQn4Cb6skxmGFtAyrhOmrXx1rK30PD4Nfp2.5v.YFsY34MegSle4l5dbqneXOSw0foWHEXRZ/pBE2Fv/
