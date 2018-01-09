@@ -1,5 +1,3 @@
 ---
 - src: geerlingguy.repo-epel
 - src: geerlingguy.nodejs
-- src: https://github.com/dischord01/wetty
-  name: wetty
