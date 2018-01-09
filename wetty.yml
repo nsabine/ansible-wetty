@@ -1,0 +1,8 @@
+---
+- hosts: all
+  gather_facts: true
+  
+  roles:
+    - { role: geerlingguy.repo-epel, when: '"control" in inventory_hostname' }
+    - { role: geerlingguy.nodejs, when: '"control" in inventory_hostname' }
+    - { role: wetty, when: '"control" in inventory_hostname' }
