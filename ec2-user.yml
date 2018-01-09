@@ -4,6 +4,8 @@
   become: yes
 
   tasks:
-  - user: 
-     name: ec2-user
-     password: $6$sRvXWmR5BBwqRlih$xYqr1mSQn4Cb6skxmGFtAyrhOmrXx1rK30PD4Nfp2.5v.YFsY34MegSle4l5dbqneXOSw0foWHEXRZ/pBE2Fv/
+  - authorized_key:
+      user: ec2-user
+      state: present
+      key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDPaWP4AbZCI4Ph0dGwmSQCuy77UW9AHwJAlHYEdkXKEpKdSlXKxF++9Y7zrvrdxLmOWkH+RxAJV4mbztQqxsGq5GQgmhCitpxEfmbtXdAcRZoereGVXar5+bLM99bggtB2Wo6HY0WoYMs3BjxPn6JcHYITkNcgBcfFxk4iGZRG/vc8d+9kTaDkYaBfs/6Yxsx1/s9VfRHezfFZrMa5W2ROizH6r/wnfC2exlpCPTkXeETQ/TLLs/yhuFB2/5DC3LJWATTKEh2RFSWbHjopsYz+WkNuQO4NRk75sajKaDA9mXf9OvZWoIS3i4a6vobfu13taEaNiI3pb6XZMjEqBVSp 
+
