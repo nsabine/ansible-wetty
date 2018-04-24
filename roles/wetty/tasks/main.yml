@@ -150,7 +150,7 @@
     name: firewalld
     enabled: no
     state: stopped
-  when: rf_result.rc == 
+  when: rf_result.rc == 0
 
 - systemd:
     name: wetty
