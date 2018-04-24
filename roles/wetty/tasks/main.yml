@@ -154,6 +154,7 @@
 
 - systemd:
     name: wetty
+    daemon_reload: yes
     state: restarted
 
 #- name: Create SELinux dir
