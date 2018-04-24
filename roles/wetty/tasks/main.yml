@@ -90,12 +90,14 @@
 - name: Generate a Self Signed OpenSSL certificate
   command: >
     openssl req
+    -new
+    -newkey rsa:4096
+    -days 365
+    -nodes
     -x509
-    -newkey rsa:2048
+    -subj "/C=US/ST=NC/L=Raleigh/O=Ansible/CN=rhdemo.io"
     -keyout /etc/ssl/wetty.key.pem
     -out /etc/ssl/wetty.cert.pem
-    -days 30000
-    -nodes
 
 # SYSTEMD
 - name: Template Systemd Service File for Wetty
