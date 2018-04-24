@@ -1,5 +1,5 @@
 ---
-- hosts: *_ansible
+- hosts: '*_ansible'
   gather_facts: true
   become: yes
   
