@@ -150,7 +150,11 @@
     name: firewalld
     enabled: no
     state: stopped
-  when: rf_result.rc == 0
+  when: rf_result.rc == 
+
+- systemd:
+    name: wetty
+    state: restarted
 
 #- name: Create SELinux dir
 #  become: yes
