@@ -87,6 +87,13 @@
 #    - cert.pem
 #    - privkey.pem
 
+- name: Generate a Self Signed OpenSSL certificate
+  openssl_certificate:
+    path: /etc/ssl/certs/wetty.com.crt
+    privatekey_path: /etc/ssl/private/wetty.com.pem
+    csr_path: /etc/ssl/csr/wetty.com.csr
+    provider: selfsigned
+
 # SYSTEMD
 - name: Template Systemd Service File for Wetty
   become: yes
