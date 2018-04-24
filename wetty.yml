@@ -1,9 +1,9 @@
 ---
-- hosts: all
+- hosts: *_ansible
   gather_facts: true
   become: yes
   
   roles:
-    - { role: geerlingguy.repo-epel, when: '"control" in inventory_hostname' }
-    - { role: geerlingguy.nodejs, when: '"control" in inventory_hostname' }
-    - { role: wetty, when: '"control" in inventory_hostname' }
+    - { role: geerlingguy.repo-epel }
+    - { role: geerlingguy.nodejs }
+    - { role: wetty }
