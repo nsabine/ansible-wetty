@@ -4,5 +4,6 @@ After=network.target auditd.service
 [Service]
 ExecStart=/usr/lib/node_modules/wetty/bin/wetty.js -p {{ wetty_port }} --sslkey /etc/ssl/wetty.key.pem --sslcert /etc/ssl/wetty.cert.pem
 Restart=always
+SELinuxContext=system_t
 [Install]
 WantedBy=multi-user.target
