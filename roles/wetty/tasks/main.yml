@@ -110,6 +110,12 @@
     mode:  0644
   notify: wetty
 
+# SELinux - need to create real policy for wetty
+- name: SELinux Policy for Wetty
+  become: yes
+  command: semanage permissive -a unconfined_service_t 
+  creates: /etc/selinux/targeted/active/modules/400/permissive_unconfined_service_t
+
 - name: enable wetty service
   become: yes
   service:
