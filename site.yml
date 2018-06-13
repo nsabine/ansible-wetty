@@ -10,9 +10,8 @@
 
   tasks:
     - name: Enable RHEL Extras Repo
-      yum_repository:
-        name: rhui-REGION-rhel-server-extras
-        enabled: yes
+      command: yum-config-manager --enable rhui-REGION-rhel-server-extras
+      when: ! yum repolist rhui-REGION-rhel-server-extras
 
     - name: Create Workshop User
       user:
