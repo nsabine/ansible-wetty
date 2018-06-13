@@ -115,6 +115,7 @@
   become: yes
   command: semanage permissive -a unconfined_service_t 
   creates: /etc/selinux/targeted/active/modules/400/permissive_unconfined_service_t
+  notify: wetty
 
 - name: enable wetty service
   become: yes
