@@ -98,6 +98,8 @@
     -subj "/C=US/ST=NC/L=Raleigh/O=Ansible/CN=rhdemo.io"
     -keyout /etc/ssl/wetty.key.pem
     -out /etc/ssl/wetty.cert.pem
+  args:
+    creates: /etc/ssl/wetty.key.pem
 
 # SYSTEMD
 - name: Template Systemd Service File for Wetty
