@@ -7,3 +7,15 @@
     - { role: geerlingguy.repo-epel }
     - { role: geerlingguy.nodejs }
     - { role: wetty }
+
+  tasks:
+    - name: Create Workshop User
+      user:
+        name:      "{{ workshop_user }}"
+        password:  "{{ workshop_password |password_hash('sha512') }}"
+        shell: /bin/bash
+        groups: 
+          - wheel
+        append:    yes
+        state:     present
+
