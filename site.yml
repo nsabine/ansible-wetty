@@ -32,3 +32,12 @@
         dest: /usr/bin/
         remote_src: yes
         extra_opts: [--strip-components=1]
+
+    - name: Install wget & git
+      become: yes
+      yum:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - wget
+        - git
